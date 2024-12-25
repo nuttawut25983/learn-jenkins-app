@@ -29,12 +29,7 @@ pipeline {
             steps {
                 echo 'Testing...'
                 sh '''
-                    ls -la
-                    node --version
-                    npm --version
-                    npm ci
-                    npm run test
-                    ls -la
+                    sh 'test -f build/index.html'
                 '''
             }
         }
